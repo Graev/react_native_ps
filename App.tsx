@@ -1,7 +1,7 @@
 import { StyleSheet, View } from "react-native";
 import Logo from "./assets/logo.svg";
 import { Input } from "./shared/Input/Input";
-import { Button } from "./components/Button";
+import { Button } from "./shared/Button/Button";
 import { Colors, Gaps } from "./shared/tokens";
 
 export default function App() {

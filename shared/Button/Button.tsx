@@ -1,12 +1,13 @@
 import {
-  TouchableOpacityProps,
   StyleSheet,
-  TouchableOpacity,
   Text,
+  Pressable,
+  PressableProps,
+  View,
 } from "react-native";
-import { Colors, Radius } from "../shared/tokens";
+import { Colors, Fonts, Radius } from "../tokens";
 
-type ButtonLocalProps = TouchableOpacityProps & {
+type ButtonLocalProps = PressableProps & {
   title: string;
   type?: "primary" | "secondary";
 };
@@ -19,14 +20,16 @@ export const Button = (props: ButtonLocalProps) => {
     styles[type] || styles.primary,
   );
 
-  const combinedStyles = StyleSheet.compose(style, extStyle);
+  // const combinedStyles = StyleSheet.compose(style, extStyle);
 
   const textStyle = type === "secondary" ? styles.secondaryText : styles.text;
 
   return (
-    <TouchableOpacity {...rest} style={combinedStyles}>
-      <Text style={textStyle}>{title}</Text>
-    </TouchableOpacity>
+    <Pressable {...rest}>
+      <View style={style}>
+        <Text style={textStyle}>{title}</Text>
+      </View>
+    </Pressable>
   );
 };
 
@@ -48,11 +51,11 @@ const styles = StyleSheet.create({
   },
 
   text: {
-    color: "#FAFAFA",
-    fontSize: 18,
+    color: Colors.white,
+    fontSize: Fonts.f18,
   },
   secondaryText: {
     color: Colors.link,
-    fontSize: 18,
+    fontSize: Fonts.f18,
   },
 });

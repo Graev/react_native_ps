@@ -5,18 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b68a874d-94b7-4c79-a690-5c2ce5b3c409" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/eye.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/eye_closed.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Button.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/declarations.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/metro.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/Input/Input.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared/tokens.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/eye.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/eye.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/eye_closed.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/eye_closed.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/shared/Button/Button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/shared/Input/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/tokens.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shared/tokens.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +29,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="1-start" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -59,7 +60,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "1-start",
+    "git-widget-placeholder": "course",
     "last_opened_file_path": "/Users/konstantingraev/Yandex.Disk.localized/StudyProjects/react_native_ps/assets",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -79,6 +80,8 @@
       <recent name="$PROJECT_DIR$/assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/shared/Button" />
+      <recent name="$PROJECT_DIR$/assets/icons" />
       <recent name="$PROJECT_DIR$/shared/Input" />
     </key>
   </component>
