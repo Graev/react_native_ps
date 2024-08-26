@@ -1,24 +1,28 @@
 import {
+  Pressable,
+  PressableProps,
   StyleSheet,
   Text,
-  TouchableOpacity,
-  TouchableOpacityProps,
+  View,
 } from "react-native";
-import { Colors } from "../tokens";
+import { Colors, Fonts, Radius } from "../tokens";
 
 type ButtonProps = {
-  label: string;
-} & TouchableOpacityProps;
+  title: string;
+} & PressableProps;
 
-export const Button = (props: ButtonProps) => {
-  const style = StyleSheet.compose(styles.button, props.style);
+export const Button = ({ title, ...props }: ButtonProps) => {
+  const style = StyleSheet.compose(
+    styles.button,
+    typeof props.style !== "function" ? props.style : {},
+  );
 
   return (
-    <TouchableOpacity style={style}>
-      <Text style={{ color: "#fff", textAlign: "center", fontWeight: "bold" }}>
-        {props.label}
-      </Text>
-    </TouchableOpacity>
+    <Pressable {...props}>
+      <View style={style}>
+        <Text style={styles.text}>{title}</Text>
+      </View>
+    </Pressable>
   );
 };
 
@@ -28,6 +32,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     paddingVertical: 21,
-    borderRadius: 16,
+    borderRadius: Radius.r16,
+  },
+  text: {
+    color: "#fff",
+    textAlign: "center",
+    fontWeight: "bold",
+    fontSize: Fonts.f16,
   },
 });
