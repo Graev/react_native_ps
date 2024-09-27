@@ -1,8 +1,43 @@
-import { ImageBackground, StyleSheet, Text, View } from "react-native";
+import {
+  Animated,
+  ImageBackground,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import { Button } from "./shared/Button/Button";
 import { Fonts } from "./shared/tokens";
 
+const useAnimatedTextShow = () => {
+  const opacity = new Animated.Value(0);
+  const position = new Animated.Value(-75);
+
+  const DURATION = 1000;
+  const USE_NATIVE_DRIVER = true;
+
+  const animateIn = () => {
+    Animated.timing(opacity, {
+      toValue: 1,
+      duration: DURATION,
+      useNativeDriver: USE_NATIVE_DRIVER,
+    }).start();
+    Animated.timing(position, {
+      toValue: 0,
+      duration: DURATION,
+      useNativeDriver: USE_NATIVE_DRIVER,
+    }).start();
+  };
+
+  return {
+    opacity,
+    position,
+    animateIn,
+  };
+};
+
 export default function App() {
+  const { position, opacity, animateIn } = useAnimatedTextShow();
+
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -13,11 +48,22 @@ export default function App() {
           top: -166,
         }}
       >
-        <Text style={styles.header}>Одно из самых вкусных кофе в городе!</Text>
+        <Animated.View
+          style={{
+            transform: [{ translateY: position }],
+            opacity,
+          }}
+          onLayout={animateIn}
+        >
+          <Text style={styles.header}>
+            Одно из самых вкусных кофе в городе!
+          </Text>
+        </Animated.View>
         <View style={{ gap: 24 }}>
           <Text style={styles.description}>
             Свежие зёрна, настоящая арабика и бережная обжарка
           </Text>
+
           <Button title={"Начать"} onPress={() => {}} />
         </View>
       </ImageBackground>

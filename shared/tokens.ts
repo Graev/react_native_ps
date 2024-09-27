@@ -1,5 +1,6 @@
 export const Colors = {
   primary: "#C67C4E",
+  primaryHover: "#A76237",
   gray: "#9B9B9B",
 };
 
