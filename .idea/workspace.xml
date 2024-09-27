@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b68a874d-94b7-4c79-a690-5c2ce5b3c409" name="Changes" comment="">
+    <list default="true" id="b68a874d-94b7-4c79-a690-5c2ce5b3c409" name="Changes" comment="6.8">
+      <change afterPath="$PROJECT_DIR$/shared/ErrorNotification/ErrorNotification.props.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/ErrorNotification/ErrorNotification.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/eye.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/eye.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/eye_closed.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/eye_closed.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/shared/Button/Button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/shared/Input/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/shared/Button/Button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shared/tokens.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shared/tokens.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,8 +63,10 @@
     "git-widget-placeholder": "course",
     "last_opened_file_path": "/Users/konstantingraev/Yandex.Disk.localized/StudyProjects/react_native_ps/assets",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "npm.ios.executor": "Run",
@@ -116,7 +118,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-WS-242.20224.342" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.23339.15" />
       </set>
     </attachedChunks>
   </component>
@@ -132,6 +134,9 @@
       <workItem from="1723613874780" duration="863000" />
       <workItem from="1723614958146" duration="69000" />
       <workItem from="1723724710178" duration="9911000" />
+      <workItem from="1727437885743" duration="386000" />
+      <workItem from="1727438282258" duration="189000" />
+      <workItem from="1727438480712" duration="3698000" />
     </task>
     <servers />
   </component>
@@ -143,10 +148,26 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="course" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="6.8" />
+    <option name="LAST_COMMIT_MESSAGE" value="6.8" />
   </component>
 </project>

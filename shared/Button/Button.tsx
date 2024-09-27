@@ -3,13 +3,42 @@ import {
   Text,
   Pressable,
   PressableProps,
-  View,
+  Animated,
+  GestureResponderEvent,
 } from "react-native";
 import { Colors, Fonts, Radius } from "../tokens";
 
 type ButtonLocalProps = PressableProps & {
   title: string;
   type?: "primary" | "secondary";
+};
+
+const useAnimateButton = (type: ButtonLocalProps["type"]) => {
+  if (type !== "primary") return;
+
+  const animatedValue = new Animated.Value(100);
+  const color = animatedValue.interpolate({
+    inputRange: [0, 100],
+    outputRange: [Colors.primaryHover, Colors.primary],
+  });
+
+  const DURATION = 100;
+
+  const fadeIn = () =>
+    Animated.timing(animatedValue, {
+      toValue: 0,
+      duration: DURATION,
+      useNativeDriver: false,
+    }).start();
+
+  const fadeOut = () =>
+    Animated.timing(animatedValue, {
+      toValue: 100,
+      duration: DURATION,
+      useNativeDriver: false,
+    }).start();
+
+  return { color, fadeIn, fadeOut };
 };
 
 export const Button = (props: ButtonLocalProps) => {
@@ -24,11 +53,30 @@ export const Button = (props: ButtonLocalProps) => {
 
   const textStyle = type === "secondary" ? styles.secondaryText : styles.text;
 
+  const { color, fadeIn, fadeOut } = useAnimateButton(type) || {};
+
+  const onPressIn = (e: GestureResponderEvent) => {
+    fadeIn && fadeIn();
+    props.onPressIn && props.onPressIn(e);
+  };
+
+  const onPressOut = (e: GestureResponderEvent) => {
+    fadeOut && fadeOut();
+    props.onPressOut && props.onPressOut(e);
+  };
+
   return (
-    <Pressable {...rest}>
-      <View style={style}>
+    <Pressable {...rest} onPressIn={onPressIn} onPressOut={onPressOut}>
+      <Animated.View
+        style={[
+          style,
+          {
+            backgroundColor: color,
+          },
+        ]}
+      >
         <Text style={textStyle}>{title}</Text>
-      </View>
+      </Animated.View>
     </Pressable>
   );
 };
