@@ -5,14 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b68a874d-94b7-4c79-a690-5c2ce5b3c409" name="Changes" comment="7 add eslint and fix">
-      <change afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/[...unmatched].tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/restore.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/fonts/FiraSans-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/fonts/FiraSans-SemiBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/404.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/Link/Link.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/eye.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/eye.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/splash.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/splash.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shared/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/shared/Button/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/ErrorNotification/ErrorNotification.props.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shared/ErrorNotification/ErrorNotification.props.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shared/ErrorNotification/ErrorNotification.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/shared/ErrorNotification/ErrorNotification.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shared/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/shared/Input/Input.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shared/tokens.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shared/tokens.ts" afterDir="false" />
@@ -26,15 +34,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="1-start" />
+        <entry key="$PROJECT_DIR$" value="2-router" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -60,32 +68,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "course",
-    "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "/Users/konstantingraev/Yandex.Disk.localized/StudyProjects/react_native_ps/assets",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.ios.executor": "Run",
-    "npm.start.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "/opt/homebrew/lib/node_modules/prettier",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
-    "ts.external.directory.path": "/Users/konstantingraev/Yandex.Disk.localized/StudyProjects/react_native_ps/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;course&quot;,
+    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/konstantingraev/Yandex.Disk.localized/StudyProjects/react_native_ps/assets/fonts&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.ios.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/opt/homebrew/lib/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/konstantingraev/Yandex.Disk.localized/StudyProjects/react_native_ps/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/fonts" />
       <recent name="$PROJECT_DIR$/assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/images" />
+      <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/shared/Button" />
       <recent name="$PROJECT_DIR$/assets/icons" />
       <recent name="$PROJECT_DIR$/shared/Input" />
@@ -116,6 +127,8 @@
       <list>
         <item itemvalue="npm.start" />
         <item itemvalue="npm.ios" />
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.ios" />
       </list>
     </recent_temporary>
   </component>
@@ -141,6 +154,7 @@
       <workItem from="1727437885743" duration="386000" />
       <workItem from="1727438282258" duration="189000" />
       <workItem from="1727438480712" duration="3698000" />
+      <workItem from="1728832566933" duration="3106000" />
     </task>
     <servers />
   </component>

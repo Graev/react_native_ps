@@ -1,5 +1,5 @@
 import { StyleSheet, Text, Dimensions, Animated } from 'react-native';
-import { Colors } from '../tokens';
+import { Colors, Fonts } from '../tokens';
 import { useEffect, useState } from 'react';
 import { ErrorNotificationProps } from './ErrorNotification.props';
 
@@ -84,6 +84,7 @@ const styles = StyleSheet.create({
 	},
 	message: {
 		color: Colors.white,
+		fontFamily: Fonts.regular,
 		fontSize: 16,
 	},
 });

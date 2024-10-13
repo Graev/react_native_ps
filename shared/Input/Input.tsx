@@ -2,7 +2,7 @@ import { Pressable, StyleSheet, TextInput, TextInputProps, View } from 'react-na
 import { useState } from 'react';
 import OpenEye from '../../assets/icons/eye.svg';
 import CloseEye from '../../assets/icons/eye_closed.svg';
-import { Colors, Radius } from '../tokens';
+import { Colors, Fonts, Radius } from '../tokens';
 
 type InputProps = TextInputProps & {
 	isHideValue?: boolean;
@@ -48,6 +48,7 @@ const styles = StyleSheet.create({
 		color: Colors.gray,
 		flexGrow: 1,
 		fontSize: 16,
+		fontFamily: Fonts.regular,
 	},
 	icon: {
 		flexShrink: 0,

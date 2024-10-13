@@ -13,7 +13,15 @@
     "react-native/split-platform-components": 2,
     "react-native/no-inline-styles": 2,
     "react-native/no-color-literals": 2,
-    "react-native/no-raw-text": 2,
+    "react-native/no-raw-text": [
+      2,
+      {
+        "skip": [
+          "Text",
+          "Link"
+        ]
+      }
+    ],
     "react-native/no-single-element-style-arrays": 2,
     "react-hooks/exhaustive-deps": "off",
     "prettier/prettier": [
@@ -38,6 +46,9 @@
     "@typescript-eslint/no-unused-expressions": ["error",{
         "allowShortCircuit": true,
         "allowTernary": true
+    }],
+    "@typescript-eslint/no-require-imports": [2, {
+      "allow": ["/assets/"]
     }]
   }
 }

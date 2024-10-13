@@ -1,12 +1,13 @@
 import { StyleSheet, View } from 'react-native';
-import Logo from './assets/logo.svg';
-import { Input } from './shared/Input/Input';
-import { Button } from './shared/Button/Button';
-import { Colors, Gaps } from './shared/tokens';
-import { ErrorNotification } from './shared/ErrorNotification/ErrorNotification';
+import Logo from '../assets/logo.svg';
+import { Input } from '../shared/Input/Input';
+import { Button } from '../shared/Button/Button';
+import { Colors, Gaps } from '../shared/tokens';
+import { ErrorNotification } from '../shared/ErrorNotification/ErrorNotification';
 import { useState } from 'react';
+import { Link } from '../shared/Link/Link';
 
-export default function App() {
+export default function Index() {
 	const [error, setError] = useState<string>('');
 	const alert = () => {
 		setError('Неверный логин или пароль');
@@ -19,13 +20,15 @@ export default function App() {
 		<View style={styles.container}>
 			<ErrorNotification error={error} />
 			<View style={styles.content}>
-				<Logo style={styles.logo} />
+				<Logo style={styles.centred} />
 				<View style={styles.form}>
 					<Input placeholder="Email" />
 					<Input placeholder="Пароль" isHideValue={true} />
 					<Button title={'Войти'} onPress={alert} />
 				</View>
-				<Button title={'Восстановить пароль'} type={'secondary'} onPress={() => {}} />
+				<Link href={'/restores'} style={styles.centred}>
+					Восстановить пароль
+				</Link>
 			</View>
 		</View>
 	);
@@ -44,7 +47,7 @@ const styles = StyleSheet.create({
 		paddingHorizontal: 55,
 		gap: Gaps.g16,
 	},
-	logo: {
+	centred: {
 		alignSelf: 'center',
 	},
 });
