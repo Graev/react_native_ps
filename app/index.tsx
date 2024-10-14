@@ -1,33 +1,7 @@
 import { Animated, ImageBackground, StyleSheet, Text, View } from 'react-native';
-import { Button } from './shared/Button/Button';
-import { Colors, Fonts } from './shared/tokens';
-
-const useAnimatedTextShow = () => {
-	const opacity = new Animated.Value(0);
-	const position = new Animated.Value(-75);
-
-	const DURATION = 1000;
-	const USE_NATIVE_DRIVER = true;
-
-	const animateIn = () => {
-		Animated.timing(opacity, {
-			toValue: 1,
-			duration: DURATION,
-			useNativeDriver: USE_NATIVE_DRIVER,
-		}).start();
-		Animated.timing(position, {
-			toValue: 0,
-			duration: DURATION,
-			useNativeDriver: USE_NATIVE_DRIVER,
-		}).start();
-	};
-
-	return {
-		opacity,
-		position,
-		animateIn,
-	};
-};
+import { Button } from '../shared/Button/Button';
+import { Colors, Fonts } from '../shared/tokens';
+import { useAnimatedTextShow } from '../hook/useAnimatedTextShow';
 
 export default function App() {
 	const { position, opacity, animateIn } = useAnimatedTextShow();
