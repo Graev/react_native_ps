@@ -4,17 +4,20 @@ import { Input } from '../shared/Input/Input';
 import { Button } from '../shared/Button/Button';
 import { Colors, Gaps } from '../shared/tokens';
 import { ErrorNotification } from '../shared/ErrorNotification/ErrorNotification';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from '../shared/Link/Link';
+import { useAtom } from 'jotai';
+import { loginAtom } from '../entities/auth/model/auth.state';
+import { router } from 'expo-router';
 
-export default function Index() {
-	const [error, setError] = useState<string>('');
-	const alert = () => {
-		setError('Неверный логин или пароль');
-		setTimeout(() => {
-			setError('');
-		}, 5000);
-	};
+export default function Login() {
+	const [email, setEmail] = useState<string>('');
+	const [password, setPassword] = useState<string>('');
+	const [{ accessToken, error, isLoading }, login] = useAtom(loginAtom);
+
+	useEffect(() => {
+		if (accessToken) router.push('/');
+	}, [accessToken]);
 
 	return (
 		<View style={styles.container}>
@@ -22,11 +25,20 @@ export default function Index() {
 			<View style={styles.content}>
 				<Logo style={styles.centred} />
 				<View style={styles.form}>
-					<Input placeholder="Email" />
-					<Input placeholder="Пароль" isHideValue={true} />
-					<Button title={'Войти'} onPress={alert} />
+					<Input placeholder="Email" onChangeText={setEmail} value={email} />
+					<Input
+						placeholder="Пароль"
+						isHideValue={true}
+						onChangeText={setPassword}
+						value={password}
+					/>
+					<Button
+						title={'Войти'}
+						onPress={() => login({ email, password })}
+						isLoading={isLoading}
+					/>
 				</View>
-				<Link href={'/restores'} style={styles.centred}>
+				<Link href={'/restore'} style={styles.centred}>
 					Восстановить пароль
 				</Link>
 			</View>

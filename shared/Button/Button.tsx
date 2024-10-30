@@ -5,12 +5,14 @@ import {
 	PressableProps,
 	Animated,
 	GestureResponderEvent,
+	ActivityIndicator,
 } from 'react-native';
 import { Colors, Fonts, Radius } from '../tokens';
 
 type ButtonLocalProps = PressableProps & {
 	title: string;
 	type?: 'primary' | 'secondary';
+	isLoading?: boolean;
 };
 
 const useAnimateButton = (type: ButtonLocalProps['type']) => {
@@ -42,7 +44,7 @@ const useAnimateButton = (type: ButtonLocalProps['type']) => {
 };
 
 export const Button = (props: ButtonLocalProps) => {
-	const { type = 'primary', title, ...rest } = props;
+	const { type = 'primary', title, isLoading, ...rest } = props;
 
 	const style = StyleSheet.compose(styles.common, styles.primary);
 
@@ -63,7 +65,7 @@ export const Button = (props: ButtonLocalProps) => {
 	};
 
 	return (
-		<Pressable {...rest} onPressIn={onPressIn} onPressOut={onPressOut}>
+		<Pressable {...rest} onPressIn={onPressIn} onPressOut={onPressOut} disabled={isLoading}>
 			<Animated.View
 				style={[
 					style,
@@ -72,7 +74,8 @@ export const Button = (props: ButtonLocalProps) => {
 					},
 				]}
 			>
-				<Text style={textStyle}>{title}</Text>
+				{!isLoading && <Text style={textStyle}>{title}</Text>}
+				{isLoading && <ActivityIndicator size="small" color="white" />}
 			</Animated.View>
 		</Pressable>
 	);
