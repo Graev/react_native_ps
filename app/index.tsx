@@ -1,7 +1,8 @@
 import { Animated, ImageBackground, StyleSheet, Text, View } from 'react-native';
-import { Button } from '../shared/Button/Button';
-import { Colors, Fonts } from '../shared/tokens';
+import { Button } from '@shared/Button/Button';
+import { Colors, Fonts } from '@shared/tokens';
 import { useAnimatedTextShow } from '../hook/useAnimatedTextShow';
+import { router } from 'expo-router';
 
 export default function App() {
 	const { position, opacity, animateIn } = useAnimatedTextShow();
@@ -11,7 +12,7 @@ export default function App() {
 			<ImageBackground
 				style={styles.background}
 				//eslint-disable-next-line @typescript-eslint/no-require-imports
-				source={require('./assets/welcome-background.png')}
+				source={require('@assets/welcome-background.png')}
 				imageStyle={styles.image}
 			>
 				<Animated.View
@@ -26,7 +27,12 @@ export default function App() {
 				<View style={styles.gap}>
 					<Text style={styles.description}>Свежие зёрна, настоящая арабика и бережная обжарка</Text>
 
-					<Button title={'Начать'} onPress={() => {}} />
+					<Button
+						title={'Начать'}
+						onPress={() => {
+							router.navigate('/catalog');
+						}}
+					/>
 				</View>
 			</ImageBackground>
 		</View>

@@ -5,9 +5,9 @@ import { useFonts } from 'expo-font';
 export default function MainLayout() {
 	const [loadedFont, error] = useFonts({
 		// eslint-disable-next-line @typescript-eslint/no-require-imports
-		Sora: require('./assets/fonts/Sora-Regular.ttf'),
+		Sora: require('@assets/fonts/Sora-Regular.ttf'),
 		// eslint-disable-next-line @typescript-eslint/no-require-imports
-		SoraSemiBold: require('./assets/fonts/Sora-SemiBold.ttf'),
+		SoraSemiBold: require('@assets/fonts/Sora-SemiBold.ttf'),
 	});
 
 	if (!loadedFont) {
@@ -18,8 +18,12 @@ export default function MainLayout() {
 		return null;
 	}
 
+	const style = {
+		flex: 1,
+	};
+
 	return (
-		<SafeAreaView>
+		<SafeAreaView style={style}>
 			<Slot />
 		</SafeAreaView>
 	);
