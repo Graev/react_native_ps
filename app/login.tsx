@@ -1,14 +1,14 @@
 import { StyleSheet, View } from 'react-native';
-import Logo from '../assets/logo.svg';
-import { Input } from '../shared/Input/Input';
-import { Button } from '../shared/Button/Button';
-import { Colors, Gaps } from '../shared/tokens';
-import { ErrorNotification } from '../shared/ErrorNotification/ErrorNotification';
 import { useEffect, useState } from 'react';
-import { Link } from '../shared/Link/Link';
 import { useAtom } from 'jotai';
-import { loginAtom } from '../entities/auth/model/auth.state';
 import { router } from 'expo-router';
+import Logo from '@assets/logo.svg';
+import { Input } from '@shared/Input/Input';
+import { Button } from '@shared/Button/Button';
+import { Colors, Gaps } from '@shared/tokens';
+import { ErrorNotification } from '@shared/ErrorNotification/ErrorNotification';
+import { Link } from '@shared/Link/Link';
+import { loginAtom } from '@entities/auth/model/auth.state';
 
 export default function Login() {
 	const [email, setEmail] = useState<string>('');

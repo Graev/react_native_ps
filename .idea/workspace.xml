@@ -4,21 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b68a874d-94b7-4c79-a690-5c2ce5b3c409" name="Changes" comment="7 add eslint and fix">
-      <change afterPath="$PROJECT_DIR$/app/(app)/_layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(app)/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entities/auth/api/api.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entities/auth/model/auth.interfaces.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entities/auth/model/auth.state.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entities/user/model/user.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entities/user/model/user.state.ts" afterDir="false" />
+    <list default="true" id="b68a874d-94b7-4c79-a690-5c2ce5b3c409" name="Changes" comment="10.9 add navigation drawer">
+      <change afterPath="$PROJECT_DIR$/app/(app)/course/[alias].tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(app)/profile.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/burger.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/close.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/menu/club-menu.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/menu/courses-menu.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/menu/profile-menu.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/profile.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entities/layout/ui/Drawer/CustomDrawer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entities/layout/ui/MenuItem/MenuItem.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entities/user/api/api.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/entities/user/ui/UserMenu/UserMenu.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature/layout/ui/CloseDrawer/CloseDrawer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature/layout/ui/MenuButton/MenuButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/api.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(app)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(app)/_layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/auth/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entities/auth/api/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/auth/model/auth.state.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entities/auth/model/auth.state.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/user/model/user.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entities/user/model/user.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/user/model/user.state.ts" beforeDir="false" afterPath="$PROJECT_DIR$/entities/user/model/user.state.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/shared/Button/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/ErrorNotification/ErrorNotification.props.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shared/ErrorNotification/ErrorNotification.props.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/tokens.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shared/tokens.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,15 +42,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="2-router" />
+        <entry key="$PROJECT_DIR$" value="3-state" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -54,6 +67,9 @@
     &quot;accountId&quot;: &quot;42eccbdc-a1da-4337-a780-3fa9e28b4b0b&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -170,7 +186,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="course" />
+                        <option value="3-state" />
                       </list>
                     </value>
                   </entry>
@@ -185,6 +201,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="6.8" />
     <MESSAGE value="7 add eslint and fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="9.15 add catalog page, request products, state" />
+    <MESSAGE value="10.9 add navigation drawer" />
+    <option name="LAST_COMMIT_MESSAGE" value="10.9 add navigation drawer" />
   </component>
 </project>

@@ -35,26 +35,24 @@ export const loginAtom = atom(
 
 		newState.isLoading = true;
 
-		set(authAtom, newState);
+		await set(authAtom, newState);
 
 		// vasia@pupkin.ru:12345678
 
 		try {
-			await new Promise((res) => setTimeout(res, 2000));
-
 			const { data } = await axios.post<IAuthResponse>(API.login, {
 				email,
 				password,
 			});
 
-			set(authAtom, {
+			await set(authAtom, {
 				isLoading: false,
 				accessToken: data.accessToken,
 				error: null,
 			});
 		} catch (error) {
 			if (error instanceof AxiosError)
-				set(authAtom, {
+				await set(authAtom, {
 					isLoading: false,
 					accessToken: null,
 					error: error.response?.data.message,
