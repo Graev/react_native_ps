@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
 	},
 	subTitle: {
 		fontSize: Fonts.f12,
-		color: '#9B9B9B',
+		color: Colors.gray9B,
 		marginBottom: 8,
 	},
 	priceContainer: {

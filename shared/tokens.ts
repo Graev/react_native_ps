@@ -3,6 +3,7 @@ export const Colors = {
 	primaryHover: '#A76237',
 	background: '#F9F9F9',
 	gray: '#A9A9A9',
+	gray9B: '#9B9B9B',
 	white: '#FFFFFF',
 	black: '#000000',
 	whiteGray: '#DDDDDD',
